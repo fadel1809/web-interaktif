@@ -249,13 +249,27 @@ html {
 .sect-1 {
   z-index: -9999;
   margin-top: 36.25em;
-  height: 43.75em;
+  height: 73.75em;
   background-position: center;
   background-repeat: no-repeat;
-  background-position-y: 6.25em;
-  background-image: url("/asset/image/bg-motor.png"); /* Corrected syntax for setting background image */
-  background-color: #786e76; /* Adjusts the size of the background image */
+  background-position-y: 15.25em;
+  background-size: 125em;
+  background-image: url("/asset/image/bg-motor.png");
+  background-color: #786e76;
 }
+
+@media (max-width: 768px) {
+  .sect-1 {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .sect-1 {
+    background-size: contain;
+  }
+}
+
 .container-sect-1 {
   width: 655px;
 }
@@ -271,6 +285,19 @@ html {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .content-sect-1 p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-sect-1 p {
+    font-size: 12px;
+  }
+}
+
 /* divider */
 .custom-shape-divider-top-1701006188 {
   position: relative;
@@ -293,6 +320,32 @@ html {
 .custom-shape-divider-top-1701006188 .shape-fill {
   fill: #786e76;
 }
+
+#videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: block; /* Default to visible */
+}
+
 /* Header /sect2 */
 .sect-2 {
   background-color: #fee8b0;
